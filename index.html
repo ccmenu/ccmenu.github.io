@@ -1,13 +1,119 @@
-<!DOCTYPE html>
-<html>
+---
+layout: minimal
+---
 
-<head>
-    <title>CCMenu</title>
-</head>
+<header>
+    <div class="content">
+        <img id="logo" src="/assets/images/logo-appicon.png">
+        <span>
+            <a href="https://github.com/ccmenu/ccmenu2">GitHub</a>
+            <a href="https://geo.itunes.apple.com/us/app/ccmenu/id603117688?mt=12">App Store</a>
+        </span>
+    </div>
+</header>
 
-<body>
-    <h1>CCMenu</h1>
-    <p>The CCMenu continuous integration monitor app</p>
-</body>
+<section id="intro">
+    <div class="content">
+        <p class="text-across">CCMenu shows the status of builds on CI/CD servers in the menu bar.<br>
+        It started as part of the <a href="https://en.wikipedia.org/wiki/CruiseControl">CruiseControl</a> project that built the first CI server.</p>
+</section>
 
-</html>
+<section id="features">
+    <div class="content">
+        <div class="grid-wrapper">
+            <div id="grid-menu-image">
+                <img src="/assets/images/screenshot-menu-cropped.png" width="640" alt="Screenshot: CCMenu's menu">
+            </div>
+            <div class="grid-text-box">
+                <h3>Menu bar</h3>
+                <p>Get a summary of the status of all builds with a quick glance to the menu bar. Notice when a build is running or is broken.</p>
+            </div>
+            <div class="grid-text-box">
+                <h3>Menu items</h3>
+                <p>See the status of individual build pipelines in the menu. Arrange items in your preferred order. Display extra information.</p>
+            </div>
+            <div class="grid-text-box">
+                <h3>Menu action</h3>
+                <p>Open the build's web page on the server by clicking the menu item.</p>
+            </div>
+       </div>
+       <div class="text-across">
+            <p>CCMenu works with GitHub Actions and <a href="https://cctray.org/servers">servers</a> that provide a feed in the  CCTray format. Add your voice to <a href="https://github.com/ccmenu/ccmenu2/discussions/10">this discussion</a> about which other servers should be supported in the future.</p>
+            <p>Clicking on a pipeline in the menu opens the link given to CCMenu by the server. Problems like the wrong page opening, port missing, or incorrect URL scheme must be fixed on the server.</p>
+            <p>
+                <a href="https://geo.itunes.apple.com/us/app/ccmenu/id603117688?mt=12" id="download" class="capsule"><img src="/assets/images/apple-64.png"> Download</a>
+                <a href="https://github.com/ccmenu/ccmenu2/issues" id="issue" class="capsule secondary"><img src="/assets/images/github-64.png">Report issue</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="features2">
+    <div class="content">
+        <div class="grid-wrapper">
+            <div id="grid-window-image">
+                <img src="/assets/images/screenshot-window-cropped.png" width="640" alt="Screenshot: CCMenu's pipeline window">
+            </div>
+            <div class="grid-text-box">
+                <h3>Window</h3>
+                <p>Get more detailed information about the last build and commit, and edit the list of pipelines in the pipeline window.</p>
+            </div>
+        </div>
+
+        <div class="grid-wrapper">
+            <div id="grid-notification-image">
+                <img src="/assets/images/screenshot-notification-cropped.png" width="640" alt="Screenshot: CCMenu notification">
+            </div>
+            <div class="grid-text-box">
+                <h3>Notifications and timer</h3>
+                <p>Receive notifications when a build starts and finishes. Check estimated time remaining for running builds.</p>
+            </div>
+        </div>
+
+        <div class="text-across">
+            <p>The estimated build time is based on the last build. If that failed quickly, the estimate won't be accurate.</p>
+            <p>Feeds in CCTray format don't contain build duration information. For these feeds CCMenu times the builds as they occur, and  only displays a timer once it has seen a complete build.</p>
+        </div>
+    </div>
+</section>
+
+<section id="features3">
+    <div class="content">
+        <div class="grid-wrapper">
+            <div class="grid-text-box with-background">
+                <img class="grid-icon" src="/assets/images/check.png">
+                <h3>Status icons</h3>
+                <p><img src="">The status of the pipelines is shown with the following icons:</p>
+                <p><img class="status-icon" src="/assets/images/icon-success-symbol@2x.png">Most recent build was successful.</p>
+                <p><img class="status-icon" src="/assets/images/icon-failure-symbol@2x.png">Most recent build failed.</p>
+                <p><img class="status-icon" src="/assets/images/icon-success-building@2x.png">Currently building. Previous build was successful.</p>
+                <p><img class="status-icon" src="/assets/images/icon-failure-building@2x.png">Currently building. Build was broken before.</p>
+                <p><img class="status-icon" src="/assets/images/icon-pause@2x.png">Pipeline is disabled or waiting for a build agent or waiting for approval.</p>
+                <p><img class="status-icon" src="/assets/images/icon-inactive@2x.png">Status unavailable</p>
+                <p>In the menu bar running builds are shown with highest priority, broken builds with second highest.
+            </div>
+            <div class="grid-text-box with-background">
+                <img class="grid-icon" src="/assets/images/github.png">
+                <h3>GitHub Action workflows</h3>
+                <p>Add workflows by owner (user or organisation) and repository. You can choose to monitor all branches or a specific one.</p>
+                <p>Sign in at GitHub to access private repositories. CCMenu will start a flow so that you can authorise it as an <a href="https://docs.github.com/en/apps/oauth-apps/using-oauth-apps/authorizing-oauth-apps">OAuth app</a> on GitHub.</p>
+                <p>Unfortunately, the scopes for OAuth apps are broad, as discussed <a href="https://github.com/ccmenu/ccmenu2/discussions/8">here</a>. CCMenu only performs read operations. You can see its full use of the GitHub API in <a href="https://github.com/ccmenu/ccmenu2/blob/main/CCMenu/Source/Server%20Monitor/GitHubAPI.swift">this class</a>.</p>
+                <p>The authentication token is stored securely in the macOS keychain.</p>
+            </div>
+            <div class="grid-text-box with-background">
+                <img class="grid-icon" src="/assets/images/cctray.png">
+                <h3>CCTray projects</h3>
+                <p>Add projects from a CCTray feed. In most cases you only have to enter the hostname and port and CCMenu will discover the full feed URL. If this doesn't work you have to provide the full URL</p>
+                <p>You can enter credentials for HTTP Basic auth if the feed is protected in this way. Currently, no other authentication mechanisms are supported.</p>
+                <p>Passwords are stored securely in the macOS keychain.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <div class="content">
+        <p>&copy; Erik Doernenburg and contributors. CCMenu is Open Source Software. See <a href="https://github.com/ccmenu/ccmenu2/blob/main/LICENSE">license</a> for details.</p>
+    </div>
+</section>

@@ -160,7 +160,7 @@ section#features3 {
 
 .capsule {
     margin-left: 1em;
-    padding: 0.7em 1.5em 0.6em 1.5em;
+    padding: 0.7em 1.5em 0.6em 1.4em;
     background-color: $dark-blue;
     border: 1px solid $dark-blue;
     border-radius: 30px;
@@ -176,15 +176,15 @@ section#features3 {
 #download.capsule img {
     vertical-align: top;
     padding-top: 1px;
-    margin-right: 4px;
+    margin-right: 5px;
     height: 18px;
     filter: invert(100%);
 }
 
 #issue.capsule img {
     vertical-align: top;
-    padding-top: 2px;
-    margin-right: 6px;
+    padding-top: 1px;
+    margin-right: 8px;
     height: 18px;
     filter: invert(30%);
 }

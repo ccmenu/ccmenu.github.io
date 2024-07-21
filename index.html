@@ -4,7 +4,7 @@ layout: minimal
 
 <header>
     <div class="content">
-        <img id="logo" src="/assets/images/logo-appicon.png">
+        <img id="logo" src="/assets/images/logo-appicon.png" alt="CCMenu logo">
         <span>
             <a href="https://github.com/ccmenu/ccmenu2">GitHub</a>
             <a href="https://geo.itunes.apple.com/us/app/ccmenu/id603117688?mt=12">App Store</a>
@@ -22,7 +22,7 @@ layout: minimal
     <div class="content">
         <div class="grid-wrapper">
             <div id="grid-menu-image">
-                <img src="/assets/images/screenshot-menu-cropped.png" width="640" alt="Screenshot: CCMenu's menu">
+                <img src="/assets/images/screenshot-menu-cropped.png" width="640" alt="screenshot showing CCMenu's menu">
             </div>
             <div class="grid-text-box">
                 <h3>Menu bar</h3>
@@ -41,8 +41,8 @@ layout: minimal
             <p>CCMenu works with GitHub Actions and <a href="https://cctray.org/servers">servers</a> that provide a feed in the  CCTray format. Add your voice to <a href="https://github.com/ccmenu/ccmenu2/discussions/10">this discussion</a> about which other servers should be supported in the future.</p>
             <p>Clicking on a pipeline in the menu opens the link given to CCMenu by the server. Problems like the wrong page opening, port missing, or incorrect URL scheme must be fixed on the server.</p>
             <p>
-                <a href="https://geo.itunes.apple.com/us/app/ccmenu/id603117688?mt=12" id="download" class="capsule"><img src="/assets/images/apple-64.png">Download</a>
-                <a href="https://github.com/ccmenu/ccmenu2/issues" id="issue" class="capsule secondary"><img src="/assets/images/github-64.png">Report issue</a>
+                <a href="https://geo.itunes.apple.com/us/app/ccmenu/id603117688?mt=12" id="download" class="capsule"><img src="/assets/images/apple-64.png" role="presentation">Download</a>
+                <a href="https://github.com/ccmenu/ccmenu2/issues" id="issue" class="capsule secondary"><img src="/assets/images/github-64.png" role="presentation">Report issue</a>
             </p>
         </div>
     </div>
@@ -52,7 +52,7 @@ layout: minimal
     <div class="content">
         <div class="grid-wrapper">
             <div id="grid-window-image">
-                <img src="/assets/images/screenshot-window-cropped.png" width="640" alt="Screenshot: CCMenu's pipeline window">
+                <img src="/assets/images/screenshot-window-cropped.png" width="640" alt="=screenshot showing CCMenu's pipeline window">
             </div>
             <div class="grid-text-box">
                 <h3>Window</h3>
@@ -62,7 +62,7 @@ layout: minimal
 
         <div class="grid-wrapper">
             <div id="grid-notification-image">
-                <img src="/assets/images/screenshot-notification-cropped.png" width="640" alt="Screenshot: CCMenu notification">
+                <img src="/assets/images/screenshot-notification-cropped.png" width="640" alt="screenshot showing CCMenu notification">
             </div>
             <div class="grid-text-box">
                 <h3>Notifications and timer</h3>
@@ -81,19 +81,19 @@ layout: minimal
     <div class="content">
         <div class="grid-wrapper">
             <div class="grid-text-box with-background">
-                <img class="grid-icon" src="/assets/images/check.png">
+                <img class="grid-icon" src="/assets/images/check.png" role="presentation">
                 <h3>Status icons</h3>
-                <p><img src="">The status of the pipelines is shown with the following icons:</p>
-                <p><img class="status-icon" src="/assets/images/icon-success-symbol@2x.png">Most recent build was successful.</p>
-                <p><img class="status-icon" src="/assets/images/icon-failure-symbol@2x.png">Most recent build failed.</p>
-                <p><img class="status-icon" src="/assets/images/icon-success-building@2x.png">Currently building. Previous build was successful.</p>
-                <p><img class="status-icon" src="/assets/images/icon-failure-building@2x.png">Currently building. Build was broken before.</p>
-                <p><img class="status-icon" src="/assets/images/icon-pause@2x.png">Pipeline is disabled or waiting for a build agent or waiting for approval.</p>
-                <p><img class="status-icon" src="/assets/images/icon-inactive@2x.png">Status unavailable</p>
+                <p>The status of the pipelines is shown with the following icons:</p>
+                <p><img class="status-icon" src="/assets/images/icon-success-symbol@2x.png" alt="icon: green cirlce with check mark">Most recent build was successful.</p>
+                <p><img class="status-icon" src="/assets/images/icon-failure-symbol@2x.png" alt="icon: red circle with diagonal cross">Most recent build failed.</p>
+                <p><img class="status-icon" src="/assets/images/icon-success-building@2x.png" alt="icon: green circle with chasing arrows">Currently building. Previous build was successful.</p>
+                <p><img class="status-icon" src="/assets/images/icon-failure-building@2x.png" alt="icon: orange circle with chasing arrows">Currently building. Build was broken before.</p>
+                <p><img class="status-icon" src="/assets/images/icon-pause@2x.png" alt="icon: grey circle with two vertical bars">Pipeline is disabled or waiting for a build agent or waiting for approval.</p>
+                <p><img class="status-icon" src="/assets/images/icon-inactive@2x.png" alt="icon: grey circle">Status unavailable</p>
                 <p>In the menu bar running builds are shown with highest priority, broken builds with second highest.
             </div>
             <div class="grid-text-box with-background">
-                <img class="grid-icon" src="/assets/images/github.png">
+                <img class="grid-icon" src="/assets/images/github.png" role="presentation">
                 <h3>GitHub Action workflows</h3>
                 <p>Add workflows by owner (user or organisation) and repository. You can choose to monitor all branches or a specific one.</p>
                 <p>Sign in at GitHub to access private repositories. CCMenu will start a flow so that you can authorise it as an <a href="https://docs.github.com/en/apps/oauth-apps/using-oauth-apps/authorizing-oauth-apps">OAuth app</a> on GitHub.</p>
@@ -101,7 +101,7 @@ layout: minimal
                 <p>The authentication token is stored securely in the macOS keychain.</p>
             </div>
             <div class="grid-text-box with-background">
-                <img class="grid-icon" src="/assets/images/cctray.png">
+                <img class="grid-icon" src="/assets/images/cctray.png" role="presentation">
                 <h3>CCTray projects</h3>
                 <p>Add projects from a CCTray feed. In most cases you only have to enter the hostname and port and CCMenu will discover the full feed URL. If this doesn't work you have to provide the full URL.</p>
                 <p>You can enter credentials for HTTP Basic auth if the feed is protected in this way. Currently, no other authentication mechanisms are supported.</p>

@@ -5,6 +5,9 @@ exclude: [README.md, LICENSE, Gemfile, Gemfile.lock, .bundle, .rubygems, run.sh]
 
 sass:
   style: compressed
+  silence_deprecations:
+    - global-builtin
+    - color-functions
 
 safe: false
 lsi: false
